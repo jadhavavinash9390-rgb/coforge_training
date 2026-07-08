@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+    <title>Registration Form</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f5f5f5;
+        }
+
+        table{
+            width:70%;
+            margin:40px auto;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:2px solid gray;
+            padding:10px;
+        }
+
+        .heading{
+            font-size:35px;
+            font-weight:bold;
+            text-align:center;
+            padding:20px;
+        }
+
+        input,textarea{
+            width:300px;
+            padding:5px;
+        }
+
+        textarea{
+            height:60px;
+        }
+
+        .gender input{
+            width:auto;
+        }
+
+        .submit{
+            width:90px;
+            padding:8px;
+            font-size:16px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<form>
+
+<table>
+
+<tr>
+    <th colspan="2" class="heading">
+        Registration Form
+    </th>
+</tr>
+
+<tr>
+    <td>Student Name</td>
+    <td>
+        <input type="text" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Father's Name</td>
+    <td>
+        <input type="text" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Mother's Name</td>
+    <td>
+        <input type="text" required>
+    </td>
+</tr>
+
+<tr>
+    <td>Date of Birth</td>
+    <td>
+        <input type="date">
+    </td>
+</tr>
+
+<tr>
+    <td>Gender</td>
+    <td class="gender">
+
+        <input type="radio" name="gender"> Male
+
+        <input type="radio" name="gender"> Female
+
+    </td>
+</tr>
+
+<tr>
+    <td>Email ID</td>
+    <td>
+        <input type="email">
+    </td>
+</tr>
+
+<tr>
+    <td>Mobile No.</td>
+    <td>
+        <input type="tel">
+    </td>
+</tr>
+
+<tr>
+    <td>Address</td>
+    <td>
+        <textarea></textarea>
+    </td>
+</tr>
+
+<tr>
+    <td>State</td>
+    <td>
+        <input type="text">
+    </td>
+</tr>
+
+<tr>
+    <td>City</td>
+    <td>
+        <input type="text">
+    </td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>
+        <input type="submit" value="Submit" class="submit">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>

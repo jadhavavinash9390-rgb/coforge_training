@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+    <title>Time Table</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 70%;
+            margin: 50px auto;
+            background-color: white;
+        }
+
+        th,td{
+            border:2px solid gray;
+            padding:15px;
+        }
+
+        .title{
+            font-size:32px;
+            font-weight:bold;
+            text-align:center;
+        }
+
+        .day{
+            text-align:center;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .hours{
+            text-align:center;
+            font-size:28px;
+            font-weight:bold;
+            vertical-align:middle;
+        }
+
+        .lunch{
+            text-align:center;
+            font-size:26px;
+            font-weight:bold;
+        }
+
+        .subject{
+            font-size:20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<table>
+
+<tr>
+    <th colspan="6" class="title">Time Table</th>
+</tr>
+
+<tr>
+
+    <td rowspan="6" class="hours">Hours</td>
+
+    <th class="day">Mon</th>
+    <th class="day">Tue</th>
+    <th class="day">Wed</th>
+    <th class="day">Thu</th>
+    <th class="day">Fri</th>
+
+</tr>
+
+<tr>
+
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+    <td class="subject">Arts</td>
+
+</tr>
+
+<tr>
+
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+    <td class="subject">Arts</td>
+
+</tr>
+
+<tr>
+
+    <td colspan="5" class="lunch">LUNCH</td>
+
+</tr>
+
+<tr>
+
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+    <td rowspan="2" class="subject">Project</td>
+
+</tr>
+
+<tr>
+
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+    <td class="subject">Science</td>
+    <td class="subject">Maths</td>
+
+</tr>
+
+</table>
+
+</body>
+</html>
