@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DOM Manipulation</title>
+
+<style>
+.mystyle{
+    color:red;
+}
+</style>
+
+<script>
+
+function createDOM() {
+
+    const myElement = document.createElement("h1");
+    myElement.textContent = "DOM Manipulation";
+    myElement.setAttribute("id", "MyH1");
+    document.body.appendChild(myElement);
+}
+
+function updateDOM() {
+
+    const myElement = document.getElementById("MyH1");
+    myElement.innerHTML = "DOM Manipulation Updated ";
+}
+
+function changeDOM() {
+
+    const myElement = document.getElementById("MyH1");
+    myElement.classList.add("mystyle");
+}
+
+function removeDOM() {
+
+    const myElement = document.getElementById("MyH1");
+    if(myElement){
+        myElement.remove();
+    }
+}
+
+</script>
+
+</head>
+
+<body>
+
+<br>
+
+<button onclick="createDOM()">Create DOM</button>
+<button onclick="updateDOM()">Update DOM</button>
+<button onclick="changeDOM()">Change DOM Style</button>
+<button onclick="removeDOM()">Remove DOM</button>
+
+</body>
+</html>

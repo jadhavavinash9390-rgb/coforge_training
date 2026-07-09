@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Default Parameters Example</title>
+
+<script>
+function add(a = 10, b = 20) {
+    console.log(a + b);
+}
+
+add(100);      // 120
+add(100, 200); // 300
+add();         // 30
+
+function add(a, b, ...args) {
+    console.log(a + b);
+    
+    let total = 0;
+    for(let n of args) {
+    	total = total + n;
+    }
+    console.log(total);
+}
+
+add(10,20,30,40,50,60);
+
+const odd = [1,2,5];
+const combined = [2,4,6,...odd];
+console.log(combined)
+
+let a= 10, b = 20;
+let str = `sum : ${a + b}`;
+console.log(str);
+
+
+//Array Destructuring
+let arr = [10,20,30,40,50];
+let [x, y, z] = arr;
+console.log(x);
+console.log(y);
+console.log(z);
+let  = [a, b, c, ...args] = arr;
+console.log(args)
+
+//Object Destructuring
+let person = {
+	firstName : 'Bunny',
+	lastName : 'vnr'
+}
+let {firstName: fname, lastName: lname } = person;
+
+const addArrow = (a, b) => a + b;
+
+const welcome = (name) => "Welcome " + name;
+
+console.log(addArrow(10, 20));
+console.log(welcome("Bunny"));
+
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>

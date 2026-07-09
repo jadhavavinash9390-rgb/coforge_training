@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Hide and Show Paragraph</title>
+<script type="text/javascript">
+function Hidepara() {
+	document.getElementById("para").style.display = "none";
+}
+
+function Showpara() {
+	document.getElementById("para").style.display = "block";
+}
+</script>
+</head>
+<body>
+<p id = "para">
+This is a sample paragraph
+</p>
+<button onclick="Hidepara()">Hide paragraph</button>
+<button onclick="Showpara()">Show paragraph</button>
+
+</body>
+</html>
