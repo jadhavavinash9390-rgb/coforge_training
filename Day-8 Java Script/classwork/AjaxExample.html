@@ -54,13 +54,14 @@
     <script type="text/javascript">
 
     function passwordstrenght() {
+    	
 
         var password = document.getElementById("pwd").value;
 
         var req = new XMLHttpRequest();
 
         req.open("GET",
-        "http://localhost:8033/MyWebApplication/PasswordStrengthServlet?pwd=" + password,
+        "http://localhost:8033/MyWebApplication/PasswordStrengthServlet?email=" + password,
         true);
 
         req.onreadystatechange = function() {
@@ -69,6 +70,32 @@
             if(req.readyState == 4 && req.status == 200) {
 
                 document.getElementById("result").innerHTML = req.responseText;
+
+            }
+
+        }
+
+        req.send();
+
+    }
+    
+  function EmailCheck() {
+    	
+
+        var email = document.getElementById("email").value;
+
+        var req = new XMLHttpRequest();
+
+        req.open("GET",
+        "http://localhost:8033/MyWebApplication/EmailCheckServlet?pwd=" + email,
+        true);
+
+        req.onreadystatechange = function() {
+
+  
+            if(req.readyState == 4 && req.status == 200) {
+
+                document.getElementById("result1").innerHTML = req.responseText;
 
             }
 
@@ -124,7 +151,11 @@
 
 <tr>
     <td>Email ID</td>
-    <td><input type="email"></td>
+    <td>
+    <input type="email" id="email" onblur ="EmailCheck()">
+        <span id="result1"></span>
+     </td>
+    
 </tr>
 
 <tr>
