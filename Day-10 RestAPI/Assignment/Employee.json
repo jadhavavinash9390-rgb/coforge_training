@@ -1,0 +1,32 @@
+{
+  "employees": [
+    {
+      "id": "101",
+      "name": "Rahul Sharma",
+      "department": "IT",
+      "designation": "Software Engineer",
+      "salary": 60000,
+      "email": "rahul@gmail.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": "102",
+      "name": "Anjali",
+      "department": "HR",
+      "designation": "HR Executive",
+      "salary": 45000,
+      "email": "anjali@gmail.com",
+      "phone": "9876543211"
+    },
+    {
+      "id": "103",
+      "name": "Sai",
+      "department": "Finance",
+      "designation": "Accountant",
+      "salary": 50000,
+      "email": "sai@gmail.com",
+      "phone": "9876543212"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
