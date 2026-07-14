@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="com.coforge.model.Course" table="Course">
+
+        <id name="courseId" column="course_id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="courseName" column="course_name"/>
+
+        <set name="students" table="Student_Course" inverse="true">
+            <key column="course_id"/>
+            
+            <many-to-many class="com.coforge.model.Student"
+                          column="student_id"/>
+        </set>
+
+    </class>
+
+</hibernate-mapping>
