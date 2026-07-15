@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address Bean -->
+    <bean id="address1" class="com.coforge.model.Address">
+        <property name="city" value="Hyderabad"/>
+        <property name="state" value="Telangana"/>
+    </bean>
+
+    <!-- Employee using Setter Injection -->
+    <bean id="employee1" class="com.coforge.model.Employee">
+        <property name="eid" value="101"/>
+        <property name="ename" value="Shiva"/>
+        <property name="esalary" value="50000"/>
+        <property name="dno" value="10"/>
+        <property name="address" ref="address1"/>
+    </bean>
+
+    <!-- Employee using Constructor Injection -->
+    <bean id="employee2" class="com.coforge.model.Employee">
+        <constructor-arg value="102"/>
+        <constructor-arg value="Kumar"/>
+        <constructor-arg value="60000"/>
+        <constructor-arg value="20"/>
+        <constructor-arg ref="address1"/>
+    </bean>
+    
+    <bean id="project1" class="com.coforge.model.Project">
+    <property name="projId" value="P101"/>
+    <property name="projName" value="Spring Boot"/>
+</bean>
+
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id ="customer1" class="com.coforge.model.Customer">
+    <property name ="customerId" value="101"></property>
+    <property name ="customerName" value="bunny"></property>
+    <property name ="emails" >
+    <list> 
+    <value>bunny@gmail.com</value>
+    <value>bunny1@gmail.com</value>
+    </list>
+    </property>
+    
+    <property name ="deliveryAdress" >
+    <list> 
+    <ref bean="deliveryaddress1"/>
+    <ref bean="deliveryaddress2"/>
+    </list>
+    </property>
+    
+    </bean>
+    
+    <bean id="deliveryaddress1" class="com.coforge.model.DeliveryAddress">
+       <property name="city" value="city-1"></property>
+       <property name="state" value="state-1"></property>
+    </bean>
+    
+    <bean id="deliveryaddress2" class="com.coforge.model.DeliveryAddress">
+       <property name="city" value="city-2"></property>
+       <property name="state" value="state-2"></property>
+    </bean>
+
+</beans>
