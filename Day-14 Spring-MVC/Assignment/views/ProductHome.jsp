@@ -1,0 +1,58 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="EMSStyle.css">
+<title>Product Management System</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Product Management System</h1>
+    </div>
+    <form action="product" method = "post">
+    <div class="content">
+        <table>
+
+            <tr>
+                <td>Product ID:</td>
+                <td><input type="number" name="pid"></td>
+            </tr>
+
+    <tr>
+        <td>Product Name:</td>
+        <td><input type="text" name="pname"></td>
+    </tr>
+    <tr>
+        <td>Product Price:</td>
+        <td><input type="number" name="price"></td>
+    </tr>
+    <tr>
+        <td>Product Quantity:</td>
+        <td><input type="number" name="quantity"></td>
+    </tr>
+
+
+        </table>
+        <br>
+        <input type="submit"  name="Add" value="Add" class="btn btn-primary"></input>
+        <input type="submit" name="Delete" value="Delete" class="btn btn-danger"></input>
+        <input type="submit" name="Update" value="Update" class="btn btn-warning"></input>
+        <input type="submit" name="Find"  value="Find" class="btn btn-secondary"></input>
+        <input type="submit" name="FindAll" value="FindAll" class="btn btn-dark"></input>
+        <br>
+
+    </div>
+    </form>
+    
+    <br/>
+    
+    <div>
+    
+    <b>${result}</b>
+    </div>
+    
+</body>
+</html>
